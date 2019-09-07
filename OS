@@ -1,0 +1,12 @@
+ProcessAPI:
+	System Calls:
+    	<unistd.h>:
+        	int execl(const char* path, const char* arg, const char* arg,.......)
+        	int execv(const char *path, char *const argv[])
+        	int execle(const char *path, const char *arg,..., char * const envp[])
+        	int execvpe(const char *file, char *const argv[],char *const envp[])
+        	fork()
+        	wait()
+
+    	<fcntl.h>:
+        	open(const char* path, int Oflag, ...)
