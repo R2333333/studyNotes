@@ -10,3 +10,8 @@ ProcessAPI:
 
     	<fcntl.h>:
         	open(const char* path, int Oflag, ...)
+		
+		
+		
+Files:
+	File discriptor is an index, pointing to an array.
