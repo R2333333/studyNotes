@@ -1,0 +1,42 @@
+ProcessAPI:
+	System Calls:
+    	<unistd.h>:
+        	int execl(const char* path, const char* arg, const char* arg,.......)
+        	int execv(const char *path, char *const argv[])
+        	int execle(const char *path, const char *arg,..., char * const envp[])
+        	int execvpe(const char *file, char *const argv[],char *const envp[])
+        	fork()
+        	wait()
+
+    	<fcntl.h>:
+        	open(const char* path, int Oflag, ...)
+	
+	CREATE: turn programs into processes, by loading codes into memory and address, 
+		allocate memory for stack and heap, initializations like setting up file discriptors for std I/O.
+		
+		Lazily: load only when needed
+			Paging, Swapping.
+			
+		Eagerly: load all before running
+		
+	
+	DESTROY, WAIT, MISCELLANCE CONTROL 
+	
+	STATUS: Running, Ready, Blocked
+	
+	
+	Schedualer
+	
+		
+Processes:
+	Time Sharing:
+		Allow processes to share the same resource one while by one while	
+	Space Sharing:
+		Divide resouce in to parts for sharing purpose
+		
+	DataStructures:
+	
+		
+		
+Files:
+	File discriptor is an index, pointing to an array.
