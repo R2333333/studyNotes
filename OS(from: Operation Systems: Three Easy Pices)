@@ -22,7 +22,7 @@ ProcessAPI:
 	
 	DESTROY, WAIT, MISCELLANCE CONTROL 
 	
-	STATUS: Running, Ready, Blocked
+	STATUS: Running, Ready, Blocked, Initial, Final(Zombie state: process finished but not cleaned up)
 	
 	
 	Schedualer
@@ -35,7 +35,7 @@ Processes:
 		Divide resouce in to parts for sharing purpose
 		
 	DataStructures:
-	
+		
 		
 		
 Files:
