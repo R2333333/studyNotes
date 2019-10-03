@@ -28,18 +28,13 @@ ProcessAPI:
 	Schedualer
 	
 		
-Processes:
+Processes(abstract): (virtualizing the cpu, makes illusion for each process that they own the entire CPU)
 	Time Sharing:
 		Allow processes to share the same resource one while by one while	
 	Space Sharing:
 		Divide resouce in to parts for sharing purpose
 		
 	DataStructures:
-		
-		
-		
-Files:
-	File discriptor is an index, pointing to an array.
 	
 Address Space:
 	Early Systems: 
@@ -69,4 +64,30 @@ Address Space:
 		    Protection:
 			protect processes from other processes and the OS itself, to make sure the process
 			  doesn't effect or be effected by other processes
+		
+Files and Directories:
+	Files: a linear array of bytes
+		*each file has a low level name, usually a number
+		
+		Inode Number: low level name of a file
+		
+		File discriptor is an index, pointing to an array.
+		
+	Directory: contains a list of pairs
+		*also has low level name
+	
+	Open File Table: tracks files the fd points to, current offset, and details like readability, writeability
+	
+	Persistent Storage(hard disk drive)
+	
+	File System Interface:
+		Creatation:
+			open("fileName", options, permission) with O_CREAT flag. (older way: creat())
+		Reading and Writing:
+			read(fd,buffer,bufferSize): returns buffer size
+			write(fd,buffer,bufferSize): returns buffer size
+				usually be called directly in highly optimized files, or printf() will be called instead
+			
+			
+			
 		
