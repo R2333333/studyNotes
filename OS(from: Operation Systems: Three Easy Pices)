@@ -88,7 +88,7 @@ Files and Directories:
 			write(fd,buffer,bufferSize): returns buffer size
 				usually be called directly in highly optimized files, or printf() will be called instead
 			
-	Reading and Writing but not Sequencially:
+	Reading and Writing but not Sequencially: to read or write from a specific position by offsetting the starting point
   		Offset the memory:
 			off_t lseek(int fildes, off_t offset, int whence);
 				fildes: file descriptor
