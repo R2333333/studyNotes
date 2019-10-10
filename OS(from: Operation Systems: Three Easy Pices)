@@ -128,5 +128,18 @@ Files and Directories:
 		
 	Deleting Directories: rmdir() can only detele empty directories, it will fail when tring to delete a nonempty directory
 	
-	Hard Link:
+	Hard Link: a human readable name linking to the inode data stracture; not allowed for directory
+		
+		unlink() removes the readable links, and when the link count goes to zero, the file file system can truely
+			delete the file and its matadata
+		
+	Symbolic Link: stores the path and file name of target file as its data, and its size depends on the path and name
+			length of the target data
 	
+	Permission Bits and Control List;
+	
+	Making and Mounting File System:
+		mkfs : makes a file system
+		mount : mount a file system to current file tree
+		
+		
