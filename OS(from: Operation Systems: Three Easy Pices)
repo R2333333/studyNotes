@@ -36,6 +36,26 @@ Processes(abstract): (virtualizing the cpu, makes illusion for each process that
 		
 	DataStructures:
 	
+Limited Direct Execution: Makes processes run efficiently and safely
+	Direct Execution:
+		Runs processes directly. Processes may have access to all files and memories
+	User Mode:
+		The mode processes run in
+	Kernel Mode:
+		The mode the OS runs in
+	Trap:
+		Processes use trap to swith control to the OS and get into the kernel mode
+	Trap Table: 
+		Used to store all syscall handler; initialized at booting system
+	Return From Trap:
+		Switch control back to process and get into user mode
+	Switching Between Process:
+		Cooperative Way:
+			OS wait for syscalls from process
+		Non-cooperative Way:
+			OS sets up a timer when system boot, and will interrupt process by the time
+		Schedualer:
+			To decide wheather to switch to another process or keep running current process after the interruption
 Address Space:
 	Early Systems: 
 		OS is a set of routains starting from address 0 in physical memmory
