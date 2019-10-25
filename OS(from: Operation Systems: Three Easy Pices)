@@ -1,3 +1,16 @@
+
+Cp4.	
+-------------------------------------------------------		
+Processes(abstract): (virtualizing the cpu, makes illusion for each process that they own the entire CPU)
+	Time Sharing:
+		Allow processes to share the same resource one while by one while	
+	Space Sharing:
+		Divide resouce in to parts for sharing purpose
+		
+	DataStructures:
+	
+Cp5.
+-------------------------------------------------------
 ProcessAPI:
 	System Calls:
     	<unistd.h>:
@@ -27,15 +40,8 @@ ProcessAPI:
 	
 	Schedualer
 	
-		
-Processes(abstract): (virtualizing the cpu, makes illusion for each process that they own the entire CPU)
-	Time Sharing:
-		Allow processes to share the same resource one while by one while	
-	Space Sharing:
-		Divide resouce in to parts for sharing purpose
-		
-	DataStructures:
-	
+Cp6.
+-------------------------------------------------------
 Limited Direct Execution: Makes processes run efficiently and safely
 	Direct Execution:
 		Runs processes directly. Processes may have access to all files and memories
@@ -56,6 +62,9 @@ Limited Direct Execution: Makes processes run efficiently and safely
 			OS sets up a timer when system boot, and will interrupt process by the time
 		Schedualer:
 			To decide wheather to switch to another process or keep running current process after the interruption
+
+Cp13.
+-------------------------------------------------------
 Address Space:
 	Early Systems: 
 		OS is a set of routains starting from address 0 in physical memmory
@@ -84,7 +93,8 @@ Address Space:
 		    Protection:
 			protect processes from other processes and the OS itself, to make sure the process
 			  doesn't effect or be effected by other processes
-		
+Cp39.
+-------------------------------------------------------
 Files and Directories:
 	Files: a linear array of bytes
 		*each file has a low level name, usually a number
