@@ -172,4 +172,34 @@ Files and Directories:
 		mkfs : makes a file system
 		mount : mount a file system to current file tree
 		
+Cp40.
+-------------------------------------------------------
+File System Implementation (using vsfs(Very Simple File System) as example)
+
+	Two Ways To Think A File System:
 		
+		Data Structure: How the data is structured on the disc
+		
+		Access Method: How does the file system maps the calls onto the structure
+		
+	The Overall Orgnazition:
+		
+		Inode: Structure used to store a file's metadata
+		
+		Inode Table: An array of on-disk inodes
+		
+		Data Region: A region of a file system used to store user data
+		
+		Bitmap: A structure that indicates if the corresponding object/block is free(0) or in-use(1) 
+			data bitmap: used for data region 
+			inode bitmap: used for inode region
+		
+		Super Block: A block that contains the information about the file system 
+			     (like the how many inodes and data blocks are in the file system)
+	
+	
+	
+	
+	
+	
+	
