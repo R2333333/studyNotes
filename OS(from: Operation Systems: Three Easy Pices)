@@ -214,7 +214,57 @@ File System Implementation (using vsfs(Very Simple File System) as example)
 		
 	Free Space Management: Keeps tracking free space (by bitmap in the vsfs, or a free list in some OS)
 	
-	Access Paths;
+	Access Paths: ("/foo/bar" for example)
+		
+		Reading From DisK:
+			open("/foo/bar", O_RDONLY):
+				1. Read root inode
+				2. Traverse pointers inside the inode to find entry for foo (foo's inode number found this step)
+				3. Traverse directory data of foo to find bar (bar's inode number found)
+				4. Read bar's inode into memory
+				5. Final permission check, allocate a file discriptor, return fd to user
+				
+			read():
+				1. Consulting inode to find the first block to read (unlees used lseek)
+				2. Update inode (atime, mtime...)
+				3. Update open file table (offset)
+				
+		Writing To Disk:
+			
+			Writing without CREATE and file already opened:
+				1. Read Bitmap;
+				2. Write Bitmap;
+				3. Read inode;
+				4. Write inode;
+				5. Write content;
+				
+			Create a file for write:
+				1. Read root inode;
+				2. Read root data;
+				3. Read foo inode;
+				4. Read foo data;
+				5. Read inode bitmap;
+				6. Write inode bitmap;
+				7. Write foo data;
+				8. Read bar inode;
+				9. Write bar inode;
+				10. Write foo inode;
+			
+	Caching an Buffering:
+		
+		Static Partitioning:
+			Store some often used blocks in memory while boosting (may take up 10% of the memory)
+		
+		Dynamic Partitioning:
+			Store the blocks after first usage(saves each finding or opening)
+			
+		Buffering:
+			Store the write content in a buffer, and stores the buffer to persistent disk latter 
+			(saves time by reducing write times). By schedual the operations, may skip some unnecessary steps.
+			
+			
+			
+				
 		
 		
 	
