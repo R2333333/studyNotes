@@ -182,7 +182,7 @@ File System Implementation (using vsfs(Very Simple File System) as example)
 		
 		Access Method: How does the file system maps the calls onto the structure
 		
-	The Overall Orgnazition:
+	The Overall Organizition:
 		
 		Inode: Structure used to store a file's metadata
 		
@@ -197,9 +197,26 @@ File System Implementation (using vsfs(Very Simple File System) as example)
 		Super Block: A block that contains the information about the file system 
 			     (like the how many inodes and data blocks are in the file system)
 	
+	File Organization: The Inode
+		
+		Inode: the short for index node
+			including: file type, size, number of blocks, protection information, time information
 	
+		The Multi-Level Index: 
+			Inodes need to point to the blocks. In case the block is too larger that needs
+			too many pointers, which many excess the limits of the pointers. Using the pointer of an inode
+			points to another block that contains mutiple pointers is called multi-level index, and the pointers
+			are call indirect pointers.
 	
+	Directory Organization：A directory is a list of pairs(entry names, inode numbers).
+		
+		Record Length: total bytes of name pluse left over space(since every delinck will left an empty space)
+		
+	Free Space Management: Keeps tracking free space (by bitmap in the vsfs, or a free list in some OS)
 	
+	Access Paths;
+		
+		
 	
-	
-	
+		
+		
