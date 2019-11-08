@@ -262,9 +262,21 @@ File System Implementation (using vsfs(Very Simple File System) as example)
 			Store the write content in a buffer, and stores the buffer to persistent disk latter 
 			(saves time by reducing write times). By schedual the operations, may skip some unnecessary steps.
 			
+Cp41.
+-------------------------------------------------------			
+Locality And Fast File System
+	
+	The Problem: Poor Performance
+	
+		Old Unix File Systems
 			
+			Has three part, Super Block, Inodes, and Data Block
 			
-				
+			Store data at next avilibal blocks
+				The data may get spreaded into random block 
+				(eg. amoung data a, b, c, d, remove small data b and d, then place large file e,
+				 it becomes a, e(partial), c, e(partial));
+				 
 		
 		
 	
