@@ -276,7 +276,60 @@ Locality And Fast File System
 				The data may get spreaded into random block 
 				(eg. amoung data a, b, c, d, remove small data b and d, then place large file e,
 				 it becomes a, e(partial), c, e(partial));
-				 
+	
+	FFS: Disk Awareness Is The Solution(Fast File System)
+		Has same API(open(), read(), write(), close()), but different implementation
+		
+	Oganizing Structure: The Cylinder Group
+		The FFS divides the Disk into a Number of Cylinder Groups, and copies super blockes into each groups
+		If one super block crupts, it can still mount the device using other replica
+		
+		Cyclinder: Tracks on different surface with same radius from the center of the disk
+		
+		Track: A curcular path on a disk surface
+		
+		----------------------------------------------
+		|S|ib db|	Data			     |
+		----------------------------------------------
+		
+	Policies: How to Allocate Directories and Files
+		Keeps related directory and files close and irrelated far away.
+		
+		For Directory: Find groups with high number of free inodes and lownumber of directory allocated
+		
+		For Files:	
+			1. Place in same groups with their inodes
+			2. Place in same groups with their directory
+		
+		For example: the directory /, a, b, files /a/c, /a/d, /a/e, /b/f
+		FFS:
+		group 	inodes		data
+		  0	 /		/---------
+		  1	 acde		aabbccddee
+		  2	 bf		bffff-----
+		  ...
+		  
+		 Regular:
+		 groups	 inodes		data
+		   0	  /		/----------
+		   1	  a		aa---------
+		   2	  b		bb---------
+		   3	  c		cc---------
+		   4	  d		dd---------
+		   5	  e		ee---------
+		   6	  f		ffff-------
+		   ...
+		   
+	File Locality:
+		How Far away two files are. (eg. for /a/b, /a/c, /a/b/d, /a/c/e, b and c have difference 1, d and e have 2)
+		
+	The Large-File Exception:
+		   
+		  
+		  
+		  
+	
+		
 		
 		
 	
