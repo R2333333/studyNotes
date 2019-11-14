@@ -324,6 +324,32 @@ Locality And Fast File System
 		How Far away two files are. (eg. for /a/b, /a/c, /a/b/d, /a/c/e, b and c have difference 1, d and e have 2)
 		
 	The Large-File Exception:
+		If put a Large File completely in one cylinder group, it may takes up all or most of the space in that group,
+			since there will be no space for other files under the same path, which increases the locality of the
+			file system and may break the structure. So FFS put a large file under few different groups, and this 
+			leads to longer seeking time. Increase bolck size can reduce the seeking time but increase wasted space.
+			
+	Other Things About the FFS:
+		
+		Subblock: 
+			In oder to reduce the waste when small files occupies the block that has larger size than the file,
+			FFS uses subblock with size of 512b instead of 4Kb. With the file size growing, it allocates more
+			subblocks to store the file, until the file grows to 4Kb, after which the file will be copied into
+			a 4Kb block.
+			
+		Writting Buffer:
+			In order to avoid the expensive cost of copying the files, the FFS use buffer to store data to be written.
+			
+		Parameterization:
+			Since the disk spans, if data blocks were placed on continous chunck of the disk, when the system sets up
+			the I/O and ready for reading next block, the disk could pass ahead the place. So the data was placed uncontinously
+			with the exact distance for system to build up the next I/O. This process is called parameterization.
+			
+		Track Buffer:
+			Stores the entire track's data in the cahe, so the system no longer need to wait the disk's rotation to get the data.
+			data.
+			
+		Allowing Long File Names By Using Sym-Link.
 		   
 		  
 		  
