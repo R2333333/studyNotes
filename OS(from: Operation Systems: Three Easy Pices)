@@ -93,6 +93,47 @@ Address Space:
 		    Protection:
 			protect processes from other processes and the OS itself, to make sure the process
 			  doesn't effect or be effected by other processes
+			  
+Cp15.
+-------------------------------------------------------
+Mechanism: Address Translation
+
+	Assumptions; An Example; Dynamic (Hardware-based) Relocation; Hardware Support; Operating System Issues;
+	
+	
+Cp18.
+-------------------------------------------------------
+Paging: Introduction
+
+	Two ways to solve space-management problems: 
+		Varibale-sized pieces: Segmentation
+		Fixed-Sized: Pages
+		
+	Page Table: To store address traslation for each page
+	
+	Vitual Page Number; Offset; Physical Frame Number;
+	
+	Where Pages store: somewhere in memory
+	
+	What's in Page Table:
+	
+		Valid bit: Indicates whether a translation is valid
+		
+		Protection bit: Indicates whether a page can be read or written
+		
+		Dirty bit: Indicates whether a page has been modified since brought to memory
+		
+		Reference bit: Indicates whether a page has been accessed
+		
+	Problems with paging:
+	
+		May be too slow: 
+			It take one more memory access to find the table
+		
+		May cause memory waste: 
+			The page tables may take up huge space in memory that should be used to store data
+
+
 Cp39.
 -------------------------------------------------------
 Files and Directories:
