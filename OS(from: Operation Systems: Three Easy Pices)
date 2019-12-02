@@ -63,6 +63,42 @@ Limited Direct Execution: Makes processes run efficiently and safely
 		Schedualer:
 			To decide wheather to switch to another process or keep running current process after the interruption
 
+CP7.
+-------------------------------------------------------
+CPU Schedualing:
+
+	Schedualling Matric: used to measure something
+  
+	Turnaroud Time: Complete Time - Start Time
+	
+	Performence Tibel: Optimized performence but prevents some processes from running
+
+	FIFO: First in first out
+		hase disadvantage when long task comes before short test, the average turnaroud time will be
+		  much longer than the turnaroud time for just dealing the short task
+
+		FIFO is optimal solution with the assumption that all jobs arrives at the sime time, but in reality
+		  the jobs doesn't arrive at same time
+
+	SJF: Shortest jobs first
+		Not to run the jobs to completion, and when new jobs come, compute the running time of the all 
+		  remaining jobs, and then run the job wit shortest time to complete.
+
+	A New Matric: Response Time
+
+		Response Time: The time from when a job come to its first run
+
+		Problems For SJF: not good for time sharing and responsitive(eg. need to wait 10 second for the terminal
+			to response when executed a process)
+
+	Round Robin: To do each jobs in the queen for a little while and swith between them
+		improves response time of each jobs, but increased the turnaround time
+
+	Incorporating with I/O: While one job is blocked waiting for I/O device, other jobs could be schedualed
+
+
+
+
 Cp13.
 -------------------------------------------------------
 Address Space:
@@ -94,6 +130,10 @@ Address Space:
 			protect processes from other processes and the OS itself, to make sure the process
 			  doesn't effect or be effected by other processes
 			  
+CP14. 
+-------------------------------------------------------
+Memory API;
+
 Cp15.
 -------------------------------------------------------
 Mechanism: Address Translation
