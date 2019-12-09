@@ -18,11 +18,31 @@
     (If something in the system need to be changed, we need to know what else relating to this part also need to change)
     
  # Software Development Life Circle
- 1. Requirement Elicitation : produces the requirement 
- 2. Requirement Analysis: produces the 
- 3. High Level System Design
- 4. Detailed Object Design
- 5. Implementation
+ 1. Requirement Elicitation : 
+     produces a system requirement(consist of a functional model, and non-functional requirement) 
+ 
+ 2. Requirement Analysis: produces
+     Functional Requirement;
+     Functional Model; 
+     Non-Functional Requirement;
+     Non-Functional Model;
+     
+ 3. High Level System Design: 
+     System Model (Subsystem decomposition, System Architecher Strategies)
+ 
+ 4. Detailed Object Design:
+ 
+ 5. Implementation:
+      Mapping associations to collections in a programming language
+ 
  6. Testing
+ 
  7. Dployment and Maintenance
+ 
+ # Models in Requirement Analysis
+ 1. Functional Model(Use Case, Requirments)
+ 2. Dynamic Model(Statemachine, Sequence Diagram, Activity Diagram)
+ 3. Object Model (Class Diagram, Data Dictionary)
+ 
+ #
  
