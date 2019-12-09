@@ -51,22 +51,22 @@
  
  Use Case includes:
    
-   1. High level use case and detailed use case.
+    1. High level use case and detailed use case.
    
-   2. Actors, System boundaries.
+    2. Actors, System boundaries.
    
-   3. Relations between Actors and use cases.
+    3. Relations between Actors and use cases.
    
-   4. Relations between use cases and use cases.
+    4. Relations between use cases and use cases.
    
-   5. UML Use Case Diagrams, Use Case Table descriptions
+    5. UML Use Case Diagrams, Use Case Table descriptions
    
 # Requirement Analysis
   
-    1. Dynamic Models: 
+   1. Dynamic Models: 
     
-    2. Object Model:
-        The objects can be found in use case
+   2. Object Model:
+     The objects can be found in use case
     
 # 
    
