@@ -39,10 +39,35 @@
  
  7. Dployment and Maintenance
  
- # Models in Requirement Analysis
+ # Models in Requirment Analysis
  1. Functional Model(Use Case, Requirments)
  2. Dynamic Model(Statemachine, Sequence Diagram, Activity Diagram)
  3. Object Model (Class Diagram, Data Dictionary)
  
- #
+ # Requirment Elicitation
+ 1. Need to know what the clients want
+ 2. Figure out the functional and non-functionl requirment
+ 3. Make scenarios and use case
+ 
+ Use Case includes:
+   
+   1. High level use case and detailed use case.
+   
+   2. Actors, System boundaries.
+   
+   3. Relations between Actors and use cases.
+   
+   4. Relations between use cases and use cases.
+   
+   5. UML Use Case Diagrams, Use Case Table descriptions
+   
+# Requirement Analysis
+  
+    1. Dynamic Models: 
+    
+    2. Object Model:
+        The objects can be found in use case
+    
+# 
+   
  
