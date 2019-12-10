@@ -68,6 +68,28 @@
    2. Object Model:
      The objects can be found in use case
     
-# 
+# Design Patterns
+Creational:
+    
+   Abstract Factory:
    
+    Enable client dependent creation of objects
+    Provide Client with interface to classes with different implementation
+     
+Structrual
+
+   Adapter:
+   
+    Convert existing component interface to user expected interface
+   Bridge:
+    
+    Allows different impletation for one single interface.
+   Composite
+   Facade
+   Proxy
+
+Behavioural
+   Command
+   Observer
+   Strategy
  
