@@ -66,6 +66,7 @@
    1. Dynamic Models: 
     
    2. Object Model:
+   
      The objects can be found in use case
     
 # Design Patterns
@@ -81,15 +82,40 @@ Structrual
    Adapter:
    
     Convert existing component interface to user expected interface
+    
    Bridge:
     
     Allows different impletation for one single interface.
-   Composite
-   Facade
-   Proxy
+    
+   Composite:
+    
+    Represents a recursive hierachy
+    Leaf and composite provide a common interface
+    
+   Facade:
+   
+    Used to encapsulate subsystems
+    Provide a high-level interface that uses low-level interfaces
+    
+   Proxy:
+   
+    Encapsulate expensive objects
+    Provides a gateway to corresponding objects
 
 Behavioural
-   Command
-   Observer
-   Strategy
+
+   Command:
+   
+    Used to provide generic user request without knowing the content of requesting
+    
+   Observer:
+   
+    Used to seperate entity objects form view
+    
+   Strategy:
+   
+    Used to encapsulate algorithms
+    Seperate policy decides which algorithm to be used
+    
+   
  
