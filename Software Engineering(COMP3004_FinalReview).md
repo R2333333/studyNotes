@@ -31,11 +31,13 @@
      System Model (Subsystem decomposition, System Architecher Strategies)
  
  4. Detailed Object Design:
- 
+     Object Design Model
+     
  5. Implementation:
       Mapping associations to collections in a programming language
  
- 6. Testing
+ 6. Testing:
+     Deliveriable system
  
  7. Dployment and Maintenance
  
@@ -68,6 +70,18 @@
    2. Object Model:
    
      The objects can be found in use case
+     
+# Category of Non-Functional Requirement
+  
+    Usiablity;
+    Realiability;
+    Performance;
+    Supportabiliy;
+    Implementation;
+    Interfaces;
+    Operations;
+    Packaging;
+    Legal;
     
 # Design Patterns
 Creational:
@@ -117,6 +131,15 @@ Behavioural
     Used to encapsulate algorithms
     Seperate policy decides which algorithm to be used
     
-#     
+# Testing
+Test Driver and Stub:
+ 
+   Test Driver:
+  
+    Simulates the code that calls the test component
+    
+   Test Stubs:
    
+    Simulated the code that was call by the test component
+  
  
