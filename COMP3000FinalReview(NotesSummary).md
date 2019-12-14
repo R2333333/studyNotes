@@ -34,7 +34,7 @@ Lecture 4
 ---
 # Files, Syscalls, I/O, Directory Access
 What nomally can be done to a file:
-* open (add the file descriptor to the open file table, for performance reason to store some info and check permission of that file)
+* open (add the file descriptor to the [open file table](/OS(from:%20Operation%20Systems:%20Three%20Easy%20Pices).md#open-file-table), for performance reason to store some info and check permission of that file)
 * read 
 * write
 * close 
