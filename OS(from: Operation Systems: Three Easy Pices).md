@@ -183,30 +183,30 @@ Cp18.
 Cp39.
 -------------------------------------------------------
 # Files and Directories:
+### Files: a linear array of bytes
 	
-	Files: a linear array of bytes
 		*each file has a low level name, usually a number
 		
 		Inode Number: low level name of a file
 		
 		File discriptor is an index, pointing to an array.
 		
-	Directory: contains a list of pairs
+### Directory: contains a list of pairs
 		*also has low level name
 	
-	Open File Table: tracks files the fd points to, current offset, and details like readability, writeability
+### Open File Table: tracks files the fd points to, current offset, and details like readability, writeability
 	
-	Persistent Storage(hard disk drive)
+### Persistent Storage(hard disk drive)
 	
-	File System Interface:
-		Creatation:
+### File System Interface:
+#### Creatation:
 			open("fileName", options, permission) with O_CREAT flag. (older way: creat())
-		Reading and Writing:
-			read(fd,buffer,bufferSize): returns buffer size
-			write(fd,buffer,bufferSize): returns buffer size
-				usually be called directly in highly optimized files, or printf() will be called instead
+#### Reading and Writing:
+	read(fd,buffer,bufferSize): returns buffer size
+	write(fd,buffer,bufferSize): returns buffer size
+	usually be called directly in highly optimized files, or printf() will be called instead
 			
-	Reading and Writing but not Sequencially: to read or write from a specific position by offsetting the starting point
+### Reading and Writing but not Sequencially: to read or write from a specific position by offsetting the starting point
   		
 		Offset the memory:
 			off_t lseek(int fildes, off_t offset, int whence);
@@ -214,51 +214,61 @@ Cp39.
 				offset: offset bytes
 				whence: flags imply how to offset		
 
-	Shared File Entries: fork() and dup()
+### Shared File Entries: fork() and dup()
 		
 		forked process will have file discriptor shared with its parent and dup will creat a file discriptor pointing
 			to the same file.
 
-	Writing Immediately with fsync(): the write() call will not write immediately, instead it will keep content to be writen
+### Writing Immediately with fsync(): the write() call will not write immediately, instead it will keep content to be writen
 					  for a while. If sysmtem crashes before the content been written to file, the data will
 					  be lost.
-		fsync(int fd): forcing the system to store all dirty data immediately to a persistent file pointed by the fd.
+#### fsync(int fd): forcing the system to store all dirty data immediately to a persistent file pointed by the fd.
 		
-	Renaming Files: eg. when using "mv foo bar", rename("foo", "bar") will be called
+### Renaming Files: 
+	eg. when using "mv foo bar", rename("foo", "bar") will be called
 		
-		rename(char *old, char *new) : rename old file to new file. This rename is an atomic operation, which means
+#### rename(char *old, char *new) : rename old file to new file. This rename is an atomic operation, which means
 			it will either rename the file succeessfully or failed with original file left, but no middle case 
 			will ever happen.
 	
-	Getting Information About Files: stat() or fstat() syscall could be used to see the matadata
+### Getting Information About Files: stat() or fstat() syscall could be used to see the matadata
 	
-		metadata: information about the file the system is storing
+#### metadata: 
+	information about the file the system is storing
 		
-		inode: the structure that each system keeps matadata in
+#### inode: 
+	the structure that each system keeps matadata in
 		
-	Removing Files: when using rm in command, unlink() syscall will be called
+### Removing Files: 
+	when using rm in command, unlink() syscall will be called
 	
 		unlink();
 		
-	Creating Directories: directory can not be written directly due to the file system
+### Creating Directories: 
+	directory can not be written directly due to the file system
 		
-		mkdir(): the syscall used to create directory. An empty directory has two entities: . and ..
+#### mkdir(): 
+	the syscall used to create directory. An empty directory has two entities: . and ..
 		
-	Deleting Directories: rmdir() can only detele empty directories, it will fail when tring to delete a nonempty directory
+### Deleting Directories: 
+	rmdir() can only detele empty directories, it will fail when tring to delete a nonempty directory
 	
-	Hard Link: a human readable name linking to the inode data stracture; not allowed for directory
+### Hard Link:
+	a human readable name linking to the inode data stracture; not allowed for directory
 		
-		unlink() removes the readable links, and when the link count goes to zero, the file file system can truely
-			delete the file and its matadata
+#### unlink() removes the readable links, and when the link count goes to zero, the file file system can truely delete the file and its matadata
 		
-	Symbolic Link: stores the path and file name of target file as its data, and its size depends on the path and name
+### Symbolic Link: 
+	stores the path and file name of target file as its data, and its size depends on the path and name
 			length of the target data
 	
-	Permission Bits and Control List;
+### Permission Bits and Control List;
 	
-	Making and Mounting File System:
-		mkfs : makes a file system
-		mount : mount a file system to current file tree
+### Making and Mounting File System:
+#### mkfs : 
+	makes a file system
+#### mount :
+	mount a file system to current file tree
 		
 Cp40.
 -------------------------------------------------------
