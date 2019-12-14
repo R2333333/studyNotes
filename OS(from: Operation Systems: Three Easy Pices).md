@@ -1,7 +1,9 @@
 
 Cp4.	
 -------------------------------------------------------		
-Processes(abstract): (virtualizing the cpu, makes illusion for each process that they own the entire CPU)
+# Processes(abstract):
+(virtualizing the cpu, makes illusion for each process that they own the entire CPU)
+	
 	Time Sharing:
 		Allow processes to share the same resource one while by one while	
 	Space Sharing:
@@ -11,7 +13,8 @@ Processes(abstract): (virtualizing the cpu, makes illusion for each process that
 	
 Cp5.
 -------------------------------------------------------
-ProcessAPI:
+# ProcessAPI:
+	
 	System Calls:
     	<unistd.h>:
         	int execl(const char* path, const char* arg, const char* arg,.......)
@@ -42,7 +45,8 @@ ProcessAPI:
 	
 Cp6.
 -------------------------------------------------------
-Limited Direct Execution: Makes processes run efficiently and safely
+# Limited Direct Execution: Makes processes run efficiently and safely
+	
 	Direct Execution:
 		Runs processes directly. Processes may have access to all files and memories
 	User Mode:
@@ -65,7 +69,7 @@ Limited Direct Execution: Makes processes run efficiently and safely
 
 CP7.
 -------------------------------------------------------
-CPU Schedualing:
+# CPU Schedualing:
 
 	Schedualling Matric: used to measure something
   
@@ -101,7 +105,8 @@ CPU Schedualing:
 
 Cp13.
 -------------------------------------------------------
-Address Space:
+# Address Space:
+	
 	Early Systems: 
 		OS is a set of routains starting from address 0 in physical memmory
 	
@@ -109,6 +114,7 @@ Address Space:
 			starting from the end of the address space 
 
 	Multiprogramming and Time Sharing:
+		
 		Address Space(abstraction): Contains all of the memory state of the running program
 		  * all memory location showed to programmers are virtual
 
@@ -132,18 +138,18 @@ Address Space:
 			  
 CP14. 
 -------------------------------------------------------
-Memory API;
+# Memory API;
 
 Cp15.
 -------------------------------------------------------
-Mechanism: Address Translation
+# Mechanism: Address Translation
 
 	Assumptions; An Example; Dynamic (Hardware-based) Relocation; Hardware Support; Operating System Issues;
 	
 	
 Cp18.
 -------------------------------------------------------
-Paging: Introduction
+# Paging: Introduction
 
 	Two ways to solve space-management problems: 
 		Varibale-sized pieces: Segmentation
@@ -176,7 +182,8 @@ Paging: Introduction
 
 Cp39.
 -------------------------------------------------------
-Files and Directories:
+# Files and Directories:
+	
 	Files: a linear array of bytes
 		*each file has a low level name, usually a number
 		
@@ -255,7 +262,7 @@ Files and Directories:
 		
 Cp40.
 -------------------------------------------------------
-File System Implementation (using vsfs(Very Simple File System) as example)
+# File System Implementation (using vsfs(Very Simple File System) as example)
 
 	Two Ways To Think A File System:
 		
@@ -345,8 +352,7 @@ File System Implementation (using vsfs(Very Simple File System) as example)
 			
 Cp41.
 -------------------------------------------------------			
-Locality And Fast File System
-	
+# Locality And Fast File System
 	The Problem: Poor Performance
 	
 		Old Unix File Systems
