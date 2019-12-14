@@ -43,7 +43,9 @@ Lecture 5
 ---
 # Signal, Memory and Background Process
 Signals:
-` Can interupt a process at any time. `
+* Can interupt a process at any time.
+* The flag of restart will restart the syscall that was interupted by the signal(if we don't restart, the read() will retrun as failed when it was interupted)
+
 
 Memory:
 * can be allocated:
@@ -54,5 +56,9 @@ Memory:
 
 * allocating memory uncontinuously on the disk may cause fragmentation (between them)
 <br>`Solutions:`<br> `using pointers pointing to pointers (handler)`<br>`allocating with same size(pages, pageframes)`
+
+Lecture 8
+---
+# Memory Management
 
 
