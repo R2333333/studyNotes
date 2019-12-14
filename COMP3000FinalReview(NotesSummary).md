@@ -55,7 +55,7 @@ Memory:
 * command line argument resides at the top, stack resides below it; code resides at the bottom, heap resides above it
 
 * allocating memory uncontinuously on the disk may cause fragmentation (between them)
-<br>`Solutions:`<br> `using pointers pointing to pointers (handler)`<br>`allocating with same size(pages, pageframes)`
+<br>`Solutions:`<br> `using pointers pointing to pointers (handler)`<br>`allocating with same size`([pages](/OS(from:%20Operation%20Systems:%20Three%20Easy%20Pices).md#paging-introduction))
 
 Lecture 8
 ---
