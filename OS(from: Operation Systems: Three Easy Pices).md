@@ -191,10 +191,13 @@ Cp39.
 		
 		File discriptor is an index, pointing to an array.
 		
-### Directory: contains a list of pairs
-		*also has low level name
+### Directory: 
+	contains a list of pairs
+		
+	*also has low level name
 	
-### Open File Table: tracks files the fd points to, current offset, and details like readability, writeability
+### Open File Table:
+	tracks files the fd points to, current offset, and details like readability, writeability
 	
 ### Persistent Storage(hard disk drive)
 	
