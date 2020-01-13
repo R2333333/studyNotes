@@ -1,0 +1,37 @@
+Knowladge Based System:
+
+	Build up a knowladge system and searching answers form the database.
+	Limited useage:
+		Cannot understand "a man shaving"
+
+Machine Learning:
+	
+	Able to extract pattern form row data.
+	Depends on data presentation.
+		(e.g. Cartesian or Polor coordinates)
+	
+	Representation Learning:
+		Learns not only the features but also the data representation it self.
+		(e.g. Auto-Encoder)
+
+	Factor of Variation:
+		Simplest features of the target
+
+	Deep Learning:
+		Introduces representations by using simpler ones.
+
+	Multilayer Perception:
+		Methametial functions maping presentations
+
+ 	Mearsuring Depth of Model:
+		Longest sequencial instructions need to be done.
+		Depth of the graph decribing how things are related.
+
+	Learning Model:
+		f(x,w) = x1*w1+x2*w2+...+xn*wn
+		Has limitations like: cannot represent XOR
+
+	Reforcement Learning:
+		Learning by trails and errors, without human guidance.
+	
+	
