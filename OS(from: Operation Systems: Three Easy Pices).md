@@ -75,7 +75,8 @@ CP7.
   
 	Turnaroud Time: Complete Time - Start Time
 	
-	Performence Tibel: Optimized performence but prevents some processes from running
+	Scheduling Matrices: There are two common matrices for scheduling, performance and fireness.(Preventing some process from running
+		to increase performance may reduce fireness)
 
 	FIFO: First in first out
 		hase disadvantage when long task comes before short test, the average turnaroud time will be
