@@ -88,7 +88,12 @@ CP7.
 	SJF: Shortest jobs first
 		Not to run the jobs to completion, and when new jobs come, compute the running time of the all 
 		  remaining jobs, and then run the job wit shortest time to complete.
-
+          
+      STCF: Shortest time-to-completion first
+          For SJF, when a time-consuming job is running and then comes a short job, it cannot switch
+          to the shorter job, which means the average turnaroud time will rise. In STCF, it can puse the 
+          longer job and switch to the shorter one.
+          
 	A New Matric: Response Time
 
 		Response Time: The time from when a job come to its first run
@@ -102,7 +107,26 @@ CP7.
 	Incorporating with I/O: While one job is blocked waiting for I/O device, other jobs could be schedualed
 
 
+Cp8.
+---
+# Muti-Level Feedback Queue
 
+      In the SJF and STCF, we assume that the length/completion-time of the job is known, which is
+      unrealistic in practice. The MLFQ relexes this assumption by using mutiple queues and approximating
+      the length of the jobs.
+      
+      The Basic Rule and Changing Priority: (Attempt #1)
+        The are several priority queues for the jobs to be running. The system only execute jobs in the queue that has highest priority. Every new arriving job will get highest priority and inserted to the highest-order queue. The priority of a job gets reduced if the job runs over a time slice, and the job will be moved to the lowwer order queue. If a job relinquishes the CUP or occurs an I/O request be for the end of current time slice, it will stay in the same queue.
+        
+        Problems: 
+            Processes with I/O request at each end of time slices could control the CPU forever(gaming the scheduler).
+            Processes in the lowest priority-queue have no change to be run(starvation) if any process existing in the first queue, even that process have alot of I/O in the future.
+            
+        Atempt #2 and #3:
+            To solve the starvation, we boost up all processes to the first queue after a period, so that all processes have equal chances to run(increased fairness).
+        
+            To avoid any process gaming the scheduler, we coming up with better time-counting. We keep tracking the total time a process used, no matter it relinquished the CUP or not.
+        
 
 Cp13.
 -------------------------------------------------------
