@@ -116,17 +116,44 @@ Cp8.
       the length of the jobs.
       
       The Basic Rule and Changing Priority: (Attempt #1)
-        The are several priority queues for the jobs to be running. The system only execute jobs in the queue that has highest priority. Every new arriving job will get highest priority and inserted to the highest-order queue. The priority of a job gets reduced if the job runs over a time slice, and the job will be moved to the lowwer order queue. If a job relinquishes the CUP or occurs an I/O request be for the end of current time slice, it will stay in the same queue.
+        The are several priority queues for the jobs to be running. The system only execute jobs in the queue that has highest priority. Every new arriving job will get highest priority and inserted to the highest-order queue. 
+		The priority of a job gets reduced if the job runs over a time slice, and the job will be moved to the lowwer order queue. 
+		If a job relinquishes the CUP or occurs an I/O request be for the end of current time slice, it will stay in the same queue.
         
         Problems: 
             Processes with I/O request at each end of time slices could control the CPU forever(gaming the scheduler).
-            Processes in the lowest priority-queue have no change to be run(starvation) if any process existing in the first queue, even that process have alot of I/O in the future.
+            Processes in the lowest priority-queue have no change to be run(starvation) if any process existing in the first queue, 
+			even that process have alot of I/O in the future.
             
         Atempt #2 and #3:
-            To solve the starvation, we boost up all processes to the first queue after a period, so that all processes have equal chances to run(increased fairness).
+            To solve the starvation, we boost up all processes to the first queue after a period, 
+			so that all processes have equal chances to run(increased fairness).
         
-            To avoid any process gaming the scheduler, we coming up with better time-counting. We keep tracking the total time a process used, no matter it relinquished the CUP or not.
+            To avoid any process gaming the scheduler, we coming up with better time-counting. 
+			We keep tracking the total time a process used, no matter it relinquished the CUP or not.
         
+
+Cp9.
+---
+# Scheduling: Propotional Share
+
+        Lottery Scheduling:
+            Gaving each process a number of tickets and coresponding numbers for those tickets.
+            Generating a random number and choosing the process that has the coresponding ticket to run.
+            
+        Stide Scheduling:
+            Each process has a stride and a pass(both a number) 
+            Running a process by the length of its stride until it reaches other processes' pass;
+            
+        Completely Fair Scheduler:
+            The length of time slice is not fixed.
+            Using virtual run time to track and decide the process to be run.
+            Preority can be set using a table and a constant called "sched_latency".
+            Time slice is calculated by a fumular raleted to the weight.
+            
+        Red-Black Tree is used to store the process tree.
+        Jobs awake from sleep will be assigned to the shortest vruntime in the system.
+
 
 Cp13.
 -------------------------------------------------------
