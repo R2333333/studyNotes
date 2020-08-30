@@ -154,6 +154,10 @@ Cp9.
         Red-Black Tree is used to store the process tree.
         Jobs awake from sleep will be assigned to the shortest vruntime in the system.
 
+Cp10.
+---
+# Muti-processor Scheduling:
+
 
 Cp13.
 -------------------------------------------------------
@@ -190,7 +194,14 @@ Cp13.
 			  
 CP14. 
 -------------------------------------------------------
-# Memory API;
+# Memory API
+
+        malloc, calloc, realloc, free;
+        
+        tools: Purify, Valgrind
+        
+
+
 
 Cp15.
 -------------------------------------------------------
