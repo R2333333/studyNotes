@@ -207,7 +207,20 @@ Cp15.
 -------------------------------------------------------
 # Mechanism: Address Translation
 
-	Assumptions; An Example; Dynamic (Hardware-based) Relocation; Hardware Support; Operating System Issues;
+	Translate virtual address to physical address, and this process is transparent to all running processes.
+
+	Use two pointers that point to base and bound.
+
+	Virtual memmory starts and runs betweent base and limit.
+
+	Start and bound could be changed, and need to be changed with kernal mode.
+
+	The OS need to handle exception such as out of boundary, in order to keep user process running safely.
+
+CP16.
+---
+# Segmentation
+
 	
 	
 Cp18.
