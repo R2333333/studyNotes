@@ -1,0 +1,26 @@
+Gradient-based learning applied to document recognition:
+    Good at word recognition than charater recognition
+
+    A fully connected of sufficient size can produce invariant output with variant input:
+        allows Distortion, Shift and scales (Le-Net5)
+    
+    Feature maps shift the same amount as the input shift
+        shift and distort to build the robustness
+        
+    The exact location of the features is less important than its approximate location:
+        for example: if the a horizontal segment on left top, a corner at up right, 
+        and a vertical segment at the bottom can tell us it's a seven.
+
+        The precies position may be humful, since the position varies in handwritting
+
+        Can be solved by adding a subsampling layour to reduce the solution
+
+    Used maximum likelihood estimation for loss function, which in this experiment equivalent to minimum mean square erro.
+        problems:
+            1. allows a trivial but unacceptable solution
+            2. no competition between classes
+        
+        could be solve with techniques like  particular sigmoid and weight initialization
+
+    Distortion on the input data lowered the test error from 0.95% to 0.8%
+    
