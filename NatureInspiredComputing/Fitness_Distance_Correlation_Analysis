@@ -1,0 +1,77 @@
+
+Fitness distance correlation:
+
+	A summary statistic that predicts the performance of genetic algorithm for global optimazition
+
+	A counterexample is a "GA-easy" fitness function showing no relation between fitness and Hamming distance
+	from groble optimal.
+
+------------------
+
+Introduction:
+
+	Large negative correlation between Hamming distance indicates the system is easy to optimize with GA.
+
+	Large positive correlation between Hamming distance indicates the problem is misleading.
+
+	Zero distance means the fitness function has no guidance, and the GA equals to random search.
+
+	FDC is encouraged and alarmed, since it works but the distance isn't based on GA operaters.
+
+	According to Jones, the Hamming distance is strongly related to mutation, 
+	which indicating the mutation is more important than the crossover.
+
+	Another interpretation is that the combination procedure has deeper relation with Hamming distance.
+------------------
+
+Constructing a conterexample:
+
+	Single-point crossover was used to devise a "distance" measure.
+
+	The Crossover Distance is difined as the number of combinations needed to make a complimentary pair into the global optimum.
+
+	Conterexample:
+		
+		The bit string is symmetric to make FDC zero.
+
+		
+---------------------
+
+Result:
+	No relations between fitness and distance
+
+	Optimum can be easily found with:
+	
+		roulette wheel selection, discrete generations, random mating, single-point crossover, no mutation
+
+	With the bitstring length increasing, the probability of finding global optimum decrease.
+
+	The reason for some run that fails is premature convergence.
+
+	The portion of search space is much less than random search, which can be thought as GA-easy.
+
+	Predictors that shows the problem to be GA-easy:
+
+		Parent-Offspring Correlation would predict this to be a GA-easy problem, 
+		but counterexamples has been seen.
+
+		Evolvability Analysis represents the probability that an offspring is better than its parents.
+
+		Crossover-Based Fitness Distance Correlation Analysis:
+
+			The crossover is frequency dependent, so there is no static distance metric can be mapped.
+
+			The crossover distance is set to be D(x), the discontinuities between 0s and 1s in x,
+			which indicate the minimum number of crossover required to achieve global optimum.
+			This test clearly indecated the problem is GA-easy.
+
+			A second measure is to set the fitness of bitstrings that only need one step of crossover to 
+			get the global optimum to 1, and the fitness of bitstrings that could produce these to 2. 
+			
+			The result of test shows that this problem is straight forward for GA to solve.
+	
+			
+		Mutation-Based Fitness Distance Correlation Analysis:
+
+			Good at finding sub-optimum.				
+
