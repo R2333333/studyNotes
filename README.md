@@ -1,8 +1,7 @@
 # studyNotes
 Topic Includes:
-### [Operating System](/OS(from:%20Operation%20Systems:%20Three%20Easy%20Pices).md)
-### [DeepLearning](/Deeplearning.md)
-### [Artificial Intelligence](/Artificial%20Intelligence%20(From%20MITOPENCOURSEWARE:%20Artificial%20Intelligence).md)
-### [Computer Vision](/ComputerVision.md)
-### [Java Tips](/JavaTips.md)
-  
+### [Operating System](/CS/OS(from:%20Operation%20Systems:%20Three%20Easy%20Pices).md)
+### [DeepLearning](/CS/ML_notes)
+### [Computer Vision](/CS/CV/ComputerVision.md)
+### [Java Tips](/CS/JavaTips.md)
+### [Classics (for ancient incription analysis)](Classics)  
