@@ -22,13 +22,13 @@ The content written in Latin and Greek could present very different meaning
 ----------------------
 terminalogy/volcabulary:
 
-eloquent 	传神的
-formidable	难克服的
-prominent	显眼的
-flaw		瑕疵
-aestheticism	唯美主义
-obfuscate	混淆
-patrons		赞助人
-aedicula	神龛
-juxtapose	并列
+	eloquent 	传神的
+	formidable	难克服的
+	prominent	显眼的
+	flaw		瑕疵
+	aestheticism	唯美主义
+	obfuscate	混淆
+	patrons		赞助人
+	aedicula	神龛
+	juxtapose	并列
 
