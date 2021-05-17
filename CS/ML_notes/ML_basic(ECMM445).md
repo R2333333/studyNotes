@@ -153,3 +153,29 @@ new instanceses
         * Clusters of approximately the same size
 
 # Association Rule
+
+* Implication means co-occurrence, not causality
+* Definition:
+
+    * Itemset: a collection of one or more items
+    * Support Count(σ): Occurrence count of an itemset
+    * Support: Fraction of transactions that contain an itemset
+    * Frequent Itemset: An itemset whose support is greater than or equal to a minsup threshold
+    * confidence:  how often items in Y appear in transactions that contain X
+
+* Apriori Algorithm:  Prune candidate itemsets in Lk+1 containing subsets of length k that are infrequent 
+
+    * Apriori principle:
+
+		* If an itemset is frequent, then all of its subsets must also be frequent
+*  Confidence of rules generated from the same itemset has an antimonotone property
+*  Minimum support threshold:
+
+	* lowering support threshold results in more frequent itemsets
+	* this may increase number of candidates and max length of frequent itemsets
+* Lift(X->Y)= Conf(X->Y)/S(Y):
+
+	* Lift == 1 : X and Y are independent
+	* Lift < 1 :  X and Y are negative correlated
+	* Lift > 1:   X and Y are positive correlated
+
