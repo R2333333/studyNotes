@@ -120,3 +120,36 @@ new instanceses
     * Can't handle clusters with varing density
 
 # Cluster Evaluation
+
+* Rand statistic and Jaccard coefficient
+* Fowlkes and Mallows index
+* Hubert's statistic
+* Normalized mutual information
+* Sum of Squared Error (SSE)
+* Elbow Method
+
+     * a simple visual method to estimate k number
+     * not robust
+     * heuristic
+* Cohesion and Separation
+
+     * Quality = SSE / BC 
+     * SSE = sum of squared error
+     * BC = between cluster sum of squares
+
+* Davies–Bouldin
+
+     * average of (cohesion / sepearation)
+
+* Silhouette analysis
+
+     * if s(i) ≈ 1 , correct
+     * if s(i) ≈ 0 , could be wrong
+     * if s(i) ≈ -1, should be in another cluster
+     * a optimal number of k shold has:
+
+        * High average silhouette scores
+        * No clusters with a maximum silhouette score less than the average score
+        * Clusters of approximately the same size
+
+# Association Rule
