@@ -7,7 +7,7 @@
 	* Keeps the total task size same, and increase the processes
 	* Amdahl's Law: 
 	
-		* S<sub>N</sub> = 1 / ( s + p<sub>N</sub>)
+		* S<sub>N</sub> = 1 / ( s + p/N)
 		* S<sub>Max</sub> = 1 / s = 1 / (1 - p)
 	
 4. Weak Scaling: 
