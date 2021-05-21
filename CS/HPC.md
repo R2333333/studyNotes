@@ -60,4 +60,39 @@
 * Other thread in the parallel region carry out the tasks
 * Use firstprivate to take a prive variable from outside the task construct
 
+# Linear Algebra
+## Matrices
+* Dense Matrices: Most or all of elements fare non-zero
+* Sparse Matrices: Most of the elements are zeros
+*  BLAS: Basic Linear Algebra Subprograms
+	
+	* Arithmetic Intensity: O(1)
+		
+		1. Level 1: vector-vector
+		2. Level 2: matrix-vector
+
+	* Arithmetic Intensity: O(N)
+	
+		3. Level 3: matrix-matrix
+* Compressed Sparse Row Format:
+
+	* Space for storing: 2N<sub>NZ</sub> + N<sub>row</sub> + 1
+
+## Benchmarks
+* HPL: measures performance on dense matrices
+* HPCG: mearsures performance on sparse matrices
+## Accelerator & GPU
+* GPU is energy efficient
+* Most of the HPC in the Top 500 uses gpu as accelerator
+* GPU connects to other pieces via PCI.E, which has large latency
+* Pascal GPU architecture:
+
+	1. contains up to 60 SMs
+	2. hight bandwidth memmory (720Gb/s)
+	3. threads divided into blocks and wraps
+	4. threads within the same block are executed by same SM and can access same shared memory
+	5. threads in blocks are divided in wraps (32 threads / wrap)
+
+* GPUs don't have branch prediction
+
 
